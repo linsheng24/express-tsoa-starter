@@ -1,0 +1,23 @@
+{
+  "entryFile": "app.ts",
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "controllerPathGlobs": ["controllers/*.ts"],
+  "spec": {
+    "outputDirectory": "./",
+    "specVersion": 3,
+    "securityDefinitions": {
+      "jwt": {
+        "type": "http",
+        "name": "Authorization",
+        "in": "header",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "scopes": {}
+      }
+    }
+  },
+  "routes": {
+    "routesDir": "./",
+    "authenticationModule": "./lib/authentication.ts"
+  }
+}
